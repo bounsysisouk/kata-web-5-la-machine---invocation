@@ -21,11 +21,24 @@ img {
 h1 {
     font-size: 2rem;
 }
-a:focus {
-    border: 44px solid;
-    outline: 30px solid;
-    padding: 10px;
+.site-nav a {
+    display: block;
+    min-height: 44px;
+    padding: 0.5rem 1rem;
+}
+.site-nav ul {
+    list-style: none;
+    padding: 0;
     margin: 0;
+}
+.site-nav a[aria-current="page"] {
+    border: 1px solid;
+
+}
+a:focus {
+    outline: 3px solid;
+    outline-offset: 2px;
+
 }
 main {
     min-height: 100vh;
@@ -55,4 +68,16 @@ main {
     float: left;
     margin-right: 1rem;
 }
-@media 
+@media (min-width: 768px) {
+    main {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    .cartes {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .carte {
+        flex: 0 1 calc(50% - 0.5rem);
+    }
+}
