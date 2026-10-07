@@ -1,10 +1,19 @@
 /** bases et reset */
-*{
+* {
     font-family: 'Lucida sans', 'Lucida sans Regular', 'Lucide Grande', 'Lucide sans unicode', Geneva , Verdana, sans-serif;
 }
-html{
+html {
 line-height: 1,5;
 }
-body{
-width: 
+body {
+    display: flex;
+    flex-direction: column;
+    gap: 0,5;
 }
+img {
+    max-width: 100%;
+}
+h1 {
+    font-size: 2rem;
+}
+a {}
