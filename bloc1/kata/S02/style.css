@@ -1,0 +1,97 @@
+/* Reglage généraux */
+*{
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    color: #333333;
+    line-height: 1.6;
+}
+/*En-tête */
+
+header {
+    background-color: #263746;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 30px 20px;
+}
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+header p {
+    margin-bottom: 0;
+}
+
+/* Contenu principal */
+
+main {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+section {
+    margin-bottom: 30px;
+}
+
+h2 {
+    color: #263746;
+    border-bottom: 2px solid #d9a441;
+    padding-bottom: 8px;
+}
+
+/* Compétence */
+
+ul {
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 8px;
+}
+
+/* Projet */
+
+.projets {
+    display: flex;
+    flex-direction:column;
+    gap: 20px; 
+}
+
+article {
+    background-color: #FFFFFF;
+    padding: 20px;
+    border: 1px solid #dddddd;
+    border-radius: 8px;
+}   
+
+article h3 {
+    margin-top: 0;
+    color: #263746;
+}
+
+/* pied de page */
+
+footer {
+    background-color: #263746;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 15px;
+}
+
+@media (min-width: 768px) {
+
+    .projets {
+        flex-direction: row;
+    }
+    article {
+        flex: 1;
+    }
+    header h1 {
+        font-size: 2.5rem;
+    }
+}
