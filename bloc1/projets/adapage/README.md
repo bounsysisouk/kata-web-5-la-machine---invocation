@@ -9,8 +9,8 @@ Ce projet consiste à créer une page web consacrée à la reine Suthida de Tha�
 
 ## Organisation du projet
 
-- 'index.html' : page d'accueil presentant la reine Suthida.
-- 'cartes.html' : page contenant les différentes sections pesenté sous forme de cartes. 
+- 'index.html' : page d'accueil présentant la reine Suthida.
+- 'cartes.html' : page contenant les différentes sections pesentées sous forme de cartes. 
 - 'assets/': dossier contenant les images utilisées dans le projet.
 - 'wireframe/' : dossier contenant les maquettes de la structure des pages.
 - 'style.css' : fichier qui definit le désign et la présentation des pages.

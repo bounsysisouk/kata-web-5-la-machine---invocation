@@ -39,7 +39,7 @@ h2 {
     padding: 0.2rem 0.5rem;
     text-decoration: none;
     color: #333333;
-    border-radius: 8px;
+    border-radius: 0.5rem;
 }
 .site-nav ul {
     list-style: none;
