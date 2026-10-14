@@ -19,3 +19,8 @@ Ce projet consiste à créer une page web consacrée à la reine Suthida de Tha�
 
 1. Extraire les fichier 
 2. Ouvrir le fichier 'index.html dans un navigateur web 
+
+## Bonus : Frise chronologique responsive 
+
+Cette fonctionnalité permet de visualiser rapidement les événements marquants de la vie de la reine Suthida. 
+je l'ai développée selon l'approche mobile first, la frise adopte une disposition verticale sur mobile et une disposition horizontale avec défilement à partir de 1024 px. Cette adaptation permet de conserver une mise en page adaptée à la taille de l'écran tout en évitant que la frise provoque un débordement horizontal de la page.

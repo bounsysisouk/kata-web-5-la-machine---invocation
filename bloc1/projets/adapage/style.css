@@ -60,6 +60,64 @@ main {
     min-height: 100vh;
     max-width: 1200px;
 }
+.frise ol {
+    list-style: none;
+    margin: 0;
+    padding: 0 0 0 1.5rem;
+    border-left: 3px solid #a51931;
+    position: relative;
+    
+}
+
+.frise ol::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 12px solid #a51931;
+    left: -8.5px;
+    bottom: -12px;
+}
+
+.frise li {
+    position: relative;
+    padding-bottom: 0.75rem;
+}
+
+.frise li::before {
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background-color: #a51931;
+    border-radius: 50%;
+    border: 2px solid #e8c547;
+    top: 0.45rem;
+    left: -1.8rem;
+}
+
+.frise time {
+    display: inline-block;
+    font-size: 0.875rem;
+    color: #333333;
+    background-color: #e8c547;
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+}
+
+.frise h3 {
+    font-size: 1.125rem;
+    margin: 0.25rem 0;
+    color: #7f1425;
+}
+
+.frise p {
+    font-size: 1rem;
+    margin: 0;
+}
+
 .cartes {
     display: flex;
     flex-direction: column;
@@ -70,7 +128,7 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 0.5     rem;
+    gap: 0.5rem;
     border: 1px solid #d6cfaf;
     border-left: 4px solid #a51931;
     border-radius: 10px;
@@ -89,6 +147,9 @@ main {
 }
 footer {
     border-top: 2px solid #a51931;
+    margin-top: 2rem;
+    margin-left: -1.5rem;
+    margin-right: -1.5rem;
     text-align: center;
     padding: 1rem;
     font-size: 0.9rem;
@@ -105,6 +166,10 @@ footer {
     .site-nav ul {
         display: flex;
         gap: 1rem;
+    }
+    .frise {
+        max-width: 900px;
+        margin: 0 auto;
     }
 
     main {
@@ -126,5 +191,56 @@ footer {
     }
     .cartes {
         flex-direction: row;    
+    }
+    .frise ol {
+        display:flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        gap: 1.5rem;
+        position: relative;
+        border-left: none;
+        border-right: none;
+        border-top: 3px solid #a51931;
+        padding: 1.5rem 0 0;
+        width: 100%;
+        overflow-x: Auto;
+        box-sizing: border-box;
+    }
+    .frise li {
+        position: relative;
+        flex: 0 0 220px;
+        border-left: none;
+        border-top: none;
+        padding-bottom: 0;
+        min-width: 0;
+    }
+    .frise li::before {
+        top: -1.9rem;
+        left: 0;
+    }
+    .frise ol::after {
+        content: "";
+        display: block;
+        position: absolute;
+        right: 0;
+        top: -8px;
+        width: 0;
+        height: 0;
+        border-top: 8px solid transparent;
+        border-bottom: 8px solid transparent;
+    }
+    
+    .frise {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    footer {
+        width: 100%;
+        max-width: 1440px;
+        box-sizing: border-box;
+        margin-top: 2rem;
+        margin-left: 0;
+        margin-right: 0;
     }
 }
