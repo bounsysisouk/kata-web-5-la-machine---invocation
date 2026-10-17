@@ -222,12 +222,13 @@ footer {
         content: "";
         display: block;
         position: absolute;
-        right: 0;
+        right: -12px;
+        left: unset;
         top: -8px;
         width: 0;
         height: 0;
-        border-top: 8px solid transparent;
-        border-bottom: 8px solid transparent;
+        border-top: 8px solid #a51931;
+        border-bottom: 8px solid #a51931;
     }
     
     .frise {
