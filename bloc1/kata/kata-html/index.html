@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kata Web4</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
@@ -16,19 +17,26 @@
 
             <!-- Destination à définir lorsqu'un serveur de traitement sera disponible -->
             <form action="" method="post">
-                <label for="name">Nom :</label>
-                <input type="text" id="name" name="Nom_utilisateur" required/>
-                <label for="mail">E-mail :</label>
-                <input type="email" id="mail" name="Adresse_email" required/>
-                <label for="select">Motif de contact</label>
-                <select name="Motif_de_contact" id="select" required>
-                    <option value="Demande d'information">Demande d'information</option>
-                    <option value="Réclamation">Réclamation</option>
-                    <option value="Autre">Autre</option>
-                </select>
-                <label for="msg">Message</label>
-                <textarea name="Message_utilisateur" id="msg" required></textarea>
-
+                <div class="form-group">
+                    <label for="name">Nom :</label>
+                    <input type="text" id="name" name="Nom_utilisateur" required/>
+                </div> 
+                <div class="form-group"> 
+                    <label for="mail">E-mail :</label>
+                    <input type="email" id="mail" name="Adresse_email" required/>
+                </div>
+                <div class="form-group">    
+                    <label for="select">Motif de contact</label>
+                    <select name="Motif_de_contact" id="select" required>
+                        <option value="Demande d'information">Demande d'information</option>
+                        <option value="Réclamation">Réclamation</option>
+                        <option value="Autre">Autre</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="msg">Message</label>
+                    <textarea name="Message_utilisateur" id="msg" required></textarea>
+                </div>
                 <button type="submit">Envoyer message</button>
             </form>
         </section>
