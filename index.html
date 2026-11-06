@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>kata-web-5-la-machine---invocation</title>
   <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
 
@@ -24,17 +25,15 @@
         <div class="champ-formulaire">
           <label for="creature">Choisis ton Démon à Queues</label>
           <select id="creature" required>
-            <option></option>
-            <option></option>
-            <option></option>
-            <option></option>
-            <option></option>
-            <option></option>
-            <option></option>
-            <option></option>
-            <option></option>
-            <option></option>
-            
+            <option value="Shukaku, le Démon à Une Queue">1. Shukaku à une queue (Ichibi)</option>
+            <option value="Matatabi, le Démon à Deux Queues">2. Matatabi à deux queues (Nibi)</option>
+            <option value="Isobu, le Démon à Trois Queues">3. Isobu à trois queues (Sanbi)</option>
+            <option value="Son Gokû, le Démon à Quatre Queues">4. Son Gokû à quatre queues (Yonbi)</option>
+            <option value="Kokuô, le Démon à Cinq Queues">5. Kokuô à cinq queues (Gobi)</option>
+            <option value="Saiken, le Démon à Six Queues">6. Saiken à six queues (Rokubi)</option>
+            <option value="Chômei, le Démon à Sept Queues">7. Chômei à sept queues (Nanabi)</option>
+            <option value="Gyûki, le Démon à Huit Queues">8. Gyûki à huit queues (Hachibi)</option>
+            <option value="Kurama, le Démon à Neuf Queues">9. Kurama à neuf queues (Kyûbi)</option>
           </select>
         </div>
 
@@ -45,7 +44,7 @@
     <!-- Carte de résultat (initialement cachée) -->
     <section id="resultat" class="carte-invocation cache">
       <p id="message"></p>
-      <button ></button>
+      <button id="recommencer" class="bouton-action bouton-secondaire">Sceller à nouveau</button>
     </section>
 
   </main>
