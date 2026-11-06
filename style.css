@@ -1,5 +1,6 @@
+
 /* ==========================================
-   1. Réinitialisation globale et styles de base
+   1. RESET ET STYLES DE BASE
    ========================================== */
 * {
   box-sizing: border-box;
@@ -42,7 +43,7 @@ h1 {
 }
 
 /* ==========================================
-   3. Formulaire et champs de saisie
+   4. FORMULAIRE
    ========================================== */
 form {
   display: flex;
@@ -78,7 +79,7 @@ input:focus, select:focus {
 }
 
 /* ==========================================
-   4. Boutons interactifs
+   5. BOUTONS
    ========================================== */
 .bouton-action {
   padding: 0.75rem 1.5rem;
@@ -107,7 +108,53 @@ input:focus, select:focus {
 }
 
 /* ==========================================
-   5. Affichage des messages et classes utilitaires
+   6. IMAGE DU BIJÛ
+   ========================================== */
+
+#image-creature {
+  display: block;
+  width: 100%;
+  max-width: 320px;
+  max-height: 320px;
+  object-fit: contain;
+  margin: 0 auto 1.5rem;
+  filter: drop-shadow(0 0 18px rgba(249, 115, 22, 0.55));
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+/* ==========================================
+   7. MESSAGE DE RÉSULTAT
+   ========================================== */
+
+#message {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #f3f4f6;
+  padding: 1rem;
+  border: 1px solid #8b5cf6;
+  border-radius: 12px;
+  background: rgba(88, 28, 135, 0.15);
+  box-shadow: 0 0 15px rgba(168, 85, 247, 0.15);
+}
+
+/* ==========================================
+   8. ANIMATIONS
+   ========================================== */
+
+
+/* ==========================================
+   9. FOOTER
+   ========================================== */
+
+footer {
+  padding: 1rem;
+  color: #9ca3af;
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+/* ==========================================
+   10. CLASSES UTILITAIRES
    ========================================== */
 #message {
   font-size: 1.15rem;
@@ -115,7 +162,6 @@ input:focus, select:focus {
   color: #f3f4f6;
 }
 
-/* Classe utilitaire pour masquer un élément */
 .cache {
   display: none;
 }
