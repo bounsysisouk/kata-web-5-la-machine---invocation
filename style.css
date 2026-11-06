@@ -1,29 +1,119 @@
 /* ==========================================
    1. Réinitialisation globale et styles de base
    ========================================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  background-color: #111827;
+  color: #f3f4f6;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
 
 /* ==========================================
-   2. Mise en page (Layout)
+   2. Mise en page 
    ========================================== */
+.page-conteneur {
+  width: 100%;
+  max-width: 420px;
+}
 
+.carte-invocation {
+  background-color: #1f2937;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(239, 68, 68, 0.15);
+  border: 1px solid #374151;
+  text-align: center;
+}
 
-
+h1 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: #f97316;
+}
 
 /* ==========================================
    3. Formulaire et champs de saisie
    ========================================== */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
 
+.champ-formulaire {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  gap: 0.5rem;
+}
+
+label {
+  font-size: 0.9rem;
+  color: #9ca3af;
+}
+
+input, select {
+  width: 100%;
+  padding: 0.75rem;
+  border-radius: 8px;
+  border: 1px solid #4b5563;
+  background-color: #111827;
+  color: #fff;
+  font-size: 1rem;
+}
+
+input:focus, select:focus {
+  outline: none;
+  border-color: #f97316;
+}
 
 /* ==========================================
    4. Boutons interactifs
    ========================================== */
+.bouton-action {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #f97316;
+  color: #111827;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
 
+.bouton-action:hover {
+  background-color: #ea580c;
+}
 
+.bouton-secondaire {
+  background-color: #4b5563;
+  color: #fff;
+  margin-top: 1rem;
+}
+
+.bouton-secondaire:hover {
+  background-color: #374151;
+}
 
 /* ==========================================
    5. Affichage des messages et classes utilitaires
    ========================================== */
+#message {
+  font-size: 1.15rem;
+  line-height: 1.5;
+  color: #f3f4f6;
+}
 
 /* Classe utilitaire pour masquer un élément */
 .cache {
