@@ -11,6 +11,7 @@
 
   <!-- Conteneur principal centré sur la page -->
   <main class="page-conteneur">
+    <div id="fumee" class="fumee"></div>
     
     <!-- Carte contenant le formulaire d'invocation -->
     <section class="carte-invocation">
@@ -43,8 +44,13 @@
 
     <!-- Carte de résultat (initialement cachée) -->
     <section id="resultat" class="carte-invocation cache">
+
+        <img id="image-creature" alt="Bijû invoqué">
+      
       <p id="message"></p>
-      <button id="recommencer" class="bouton-action bouton-secondaire">Sceller à nouveau</button>
+      <button id="recommencer" class="bouton-action bouton-secondaire">
+        Sceller à nouveau
+      </button>
     </section>
 
   </main>

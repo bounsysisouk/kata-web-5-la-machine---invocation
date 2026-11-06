@@ -11,15 +11,20 @@
 
 body {
   font-family: system-ui, -apple-system, sans-serif;
-  background:
-    radial-gradient(ellipse at center, #252044 0%, #111827 65%, #080b14 100%);
+  /*image de fond*/
+  background-image: url("image/image-fond.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
   color: #f3f4f6;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 1.5rem;
+  padding: 1.rem;
 }
 
 /* ==========================================
@@ -47,7 +52,7 @@ body {
   box-shadow:
     0 0 15px rgba(249, 115, 22, 0.25),
     0 0 40px rgba(168, 85, 247, 0.12);
-  
+  animation: apparition 0.7s ease both;
 }
 
 h1 {
@@ -142,12 +147,34 @@ select:focus {
 #image-creature {
   display: block;
   width: 100%;
-  max-width: 320px;
-  max-height: 320px;
+  max-width: 450px;
+  height: 400px;
   object-fit: contain;
   margin: 0 auto 1.5rem;
-  filter: drop-shadow(0 0 18px rgba(249, 115, 22, 0.55));
-  transition: transform 0.3s ease, filter 0.3s ease;
+  filter: drop-shadow(0 0 20px rgba(249, 115, 22, 0.5));
+  transition: transform 0.4s ease, filter 0.4s ease;
+}
+#resultat {
+  width: 100%;
+  max-width: 460px;
+  overflow: hidden;
+  opacity: 0;
+  transform: scale(0.8);
+  visibility: hidden;
+
+  transition: opacity 0.5s ease,
+              transform 0.5s ease,
+              visibility 0.5s;
+}
+
+#resultat.visible {
+  opacity: 1;
+  transform: scale(1);
+  visibility: visible;
+}
+
+#resultat img {
+  max-width: 100%;
 }
 
 /* ==========================================
@@ -166,9 +193,46 @@ select:focus {
 }
 
 /* ==========================================
-   8. ANIMATIONS
+   8. ANIMATIONS ET EFFETS VISUELS
    ========================================== */
 
+  /* Effet de survole */
+#image-creature:hover {
+    transform: scale(1.2);
+    filter: drop shadow(0 0 35px rgba(249, 115, 22, à,ç));
+}
+
+/* Fumée d'invocation */
+
+.page-conteneur {
+  position: relative;
+}
+
+.fumee {
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+  pointer-events: none;
+  opacity: 0;
+  transform: scale(0.4);
+  background-color: rgba(255, 0, 0, 0.5);
+
+  background:
+    radial-gradient(ellipse at 25% 50%, rgba(230, 230, 230, 0.9), transparent 35%),
+    radial-gradient(ellipse at 70% 40%, rgba(190, 190, 190, 0.9), transparent 40%),
+    radial-gradient(ellipse at 50% 75%, rgba(240, 240, 240, 0.8), transparent 35%);
+
+  filter: blur(12px);
+
+  transition:
+    opacity 0.5s ease,
+    transform 0.7s ease;
+}
+
+.fumee.active {
+  opacity: 1;
+  transform: scale(1.4);
+}
 
 /* ==========================================
    9. FOOTER

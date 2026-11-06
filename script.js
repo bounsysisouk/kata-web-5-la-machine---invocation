@@ -7,6 +7,7 @@ const sectionResultat = document.getElementById('resultat');
 const elementMessage = document.getElementById('message');
 const boutonRecommencer = document.getElementById('recommencer');
 const imageCreature = document.getElementById('image-creature');
+const fumee = document.getElementById("fumee");
 
 // Récupération de la carte contenant le formulaire
 const carteInvocation = formulaireInvocation.closest('.carte-invocation');
@@ -15,15 +16,15 @@ const carteInvocation = formulaireInvocation.closest('.carte-invocation');
  * Correspondance entre les Bijû et leurs images
  */
 const imagesBijus = {
-  "Shukaku, le Démon à Une Queue": "images/shukaku.webp",
-  "Matatabi, le Démon à Deux Queues": "images/matatabi.png",
-  "Isobu, le Démon à Trois Queues": "images/isobu.png",
-  "Son Gokû, le Démon à Quatre Queues": "images/son-goku.webp",
-  "Kokuô, le Démon à Cinq Queues": "images/kokuo.png",
-  "Saiken, le Démon à Six Queues": "images/saiken.png",
-  "Chômei, le Démon à Sept Queues": "images/chomei.png",
-  "Gyûki, le Démon à Huit Queues": "images/gyuki.png",
-  "Kurama, le Démon à Neuf Queues": "images/kurama.png"
+  "Shukaku, le Démon à Une Queue": "image/shukaku.webp",
+  "Matatabi, le Démon à Deux Queues": "image/matatabi.png",
+  "Isobu, le Démon à Trois Queues": "image/isobu.png",
+  "Son Gokû, le Démon à Quatre Queues": "image/son-goku.webp",
+  "Kokuô, le Démon à Cinq Queues": "image/kokuo.png",
+  "Saiken, le Démon à Six Queues": "image/saiken.png",
+  "Chômei, le Démon à Sept Queues": "image/chomei.png",
+  "Gyûki, le Démon à Huit Queues": "image/gyuki.png",
+  "Kurama, le Démon à Neuf Queues": "image/kurama.png"
 };
 
 /**
@@ -46,9 +47,27 @@ formulaireInvocation.addEventListener('submit', (event) => {
   elementMessage.textContent =
     `Shinobi ${prenom}, ${creature} a accepté de lier son chakra au tien pour tout le Bloc 1 !`;
 
-  // Affichage du résultat
-  carteInvocation.classList.add('cache');
-  sectionResultat.classList.remove('cache');
+  // AFFICHAGE DU RESULTAT
+
+  // Déclenche la fumée d'invocation
+  fumee.classList.add('active');
+  console.log(fumee.className);
+  // Attend que la fumée recouvre la carte
+  setTimeout(() => {
+
+    // Masque le formulaire et affiche le résultat
+    carteInvocation.classList.add('cache');
+    sectionResultat.classList.remove('cache');
+
+    // Dissipe la fumée pour révéler le Bijû
+    setTimeout(() => {
+      fumee.classList.remove('active');
+    }, 100);
+
+  }, 700);
+  setTimeout(() => {
+    sectionResultat.classList.add('visible');
+  }, 30);
 
 });
 
@@ -61,6 +80,7 @@ boutonRecommencer.addEventListener('click', () => {
   formulaireInvocation.reset();
 
   // Masque le résultat
+  sectionResultat.classList.remove('visible');
   sectionResultat.classList.add('cache');
 
   // Réaffiche le formulaire
