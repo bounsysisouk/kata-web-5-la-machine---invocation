@@ -1,31 +1,208 @@
+
 /* ==========================================
-   1. Réinitialisation globale et styles de base
+   1. RESET ET STYLES DE BASE
+   ========================================== */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  background:
+    radial-gradient(ellipse at center, #252044 0%, #111827 65%, #080b14 100%);
+  color: #f3f4f6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+}
+
+/* ==========================================
+   2. CONTENEUR PRINCIPAL
+   ========================================== */
+
+.page-conteneur {
+  width: 100%;
+  max-width: 460px;
+  margin: auto;
+}
+
+/* ==========================================
+   3. CARTE D'INVOCATION
+   ========================================== */
+
+.carte-invocation {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(145deg, #1f2937, #111827);
+  padding: 2rem;
+  border-radius: 18px;
+  border: 1px solid #f97316;
+  text-align: center;
+  box-shadow:
+    0 0 15px rgba(249, 115, 22, 0.25),
+    0 0 40px rgba(168, 85, 247, 0.12);
+  
+}
+
+h1 {
+  font-size: 1.5rem;
+  margin-bottom: 1.8rem;
+  color: #fb923c;
+  text-shadow: 0 0 12px rgba(249, 115, 22, 0.6);
+}
+
+/* ==========================================
+   4. FORMULAIRE
+   ========================================== */
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.champ-formulaire {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  gap: 0.5rem;
+}
+
+label {
+  font-size: 0.9rem;
+  color: #c4b5fd;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 0.85rem;
+  border-radius: 8px;
+  border: 1px solid #4b5563;
+  background-color: #111827;
+  color: #fff;
+  font-size: 1rem;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  border-color: #f97316;
+  box-shadow: 0 0 12px rgba(249, 115, 22, 0.3);
+}
+
+/* ==========================================
+   5. BOUTONS
+   ========================================== */
+
+.bouton-action {
+  padding: 0.85rem 1.5rem;
+  border: 1px solid #fb923c;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #f97316, #c2410c);
+  color: #fff;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.25s, box-shadow 0.25s;
+  box-shadow: 0 4px 15px rgba(249, 115, 22, 0.25);
+}
+
+.bouton-action:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 22px rgba(249, 115, 22, 0.6);
+}
+
+.bouton-action:active {
+  transform: scale(0.97);
+}
+
+.bouton-secondaire {
+  background: linear-gradient(135deg, #4b5563, #312e81);
+  border-color: #818cf8;
+  color: #fff;
+  margin-top: 1rem;
+}
+
+.bouton-secondaire:hover {
+  box-shadow: 0 0 18px rgba(129, 140, 248, 0.5);
+}
+
+/* ==========================================
+   6. IMAGE DU BIJÛ
+   ========================================== */
+
+#image-creature {
+  display: block;
+  width: 100%;
+  max-width: 320px;
+  max-height: 320px;
+  object-fit: contain;
+  margin: 0 auto 1.5rem;
+  filter: drop-shadow(0 0 18px rgba(249, 115, 22, 0.55));
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+/* ==========================================
+   7. MESSAGE DE RÉSULTAT
+   ========================================== */
+
+#message {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #f3f4f6;
+  padding: 1rem;
+  border: 1px solid #8b5cf6;
+  border-radius: 12px;
+  background: rgba(88, 28, 135, 0.15);
+  box-shadow: 0 0 15px rgba(168, 85, 247, 0.15);
+}
+
+/* ==========================================
+   8. ANIMATIONS
    ========================================== */
 
 
 /* ==========================================
-   2. Mise en page (Layout)
+   9. FOOTER
    ========================================== */
 
-
-
+footer {
+  padding: 1rem;
+  color: #9ca3af;
+  font-size: 0.8rem;
+  text-align: center;
+}
 
 /* ==========================================
-   3. Formulaire et champs de saisie
+   10. CLASSES UTILITAIRES
    ========================================== */
 
-
-/* ==========================================
-   4. Boutons interactifs
-   ========================================== */
-
-
-
-/* ==========================================
-   5. Affichage des messages et classes utilitaires
-   ========================================== */
-
-/* Classe utilitaire pour masquer un élément */
 .cache {
   display: none;
+}
+
+/* ==========================================
+   11. RESPONSIVE
+   ========================================== */
+
+@media (max-width: 480px) {
+  .carte-invocation {
+    padding: 1.4rem;
+  }
+
+  h1 {
+    font-size: 1.3rem;
+  }
+
+  #image-creature {
+    max-height: 250px;
+  }
 }
