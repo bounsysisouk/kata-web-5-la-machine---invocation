@@ -27,7 +27,7 @@ const imagesBijus = {
   "Kurama, le Démon à Neuf Queues": "image/kurama.png"
 };
 
-/**
+/*
  * Soumission du formulaire d'invocation
  */
 formulaireInvocation.addEventListener('submit', (event) => {
