@@ -51,7 +51,7 @@ formulaireInvocation.addEventListener('submit', (event) => {
 
   // Déclenche la fumée d'invocation
   fumee.classList.add('active');
-  console.log(fumee.className);
+
   // Attend que la fumée recouvre la carte
   setTimeout(() => {
 
